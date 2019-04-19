@@ -15,6 +15,10 @@ variable "region" {
   description = "Digital Ocean Region"
   default = "lon1"
 }
+variable "droplet_image" {
+  description = "Digital Ocean Droplet Image"
+  default = "debian-9-x64"
+}
 
 variable "jenkins_droplet_size" {
   description = "Droplet size for Jenkins server"
