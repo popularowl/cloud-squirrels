@@ -1,6 +1,11 @@
 FROM jenkins/jenkins:latest
 
-RUN /usr/local/bin/install-plugins.sh git matrix-auth blueocean
+
+# install jenkins plugins
+COPY ./jenkins-plugins /usr/share/jenkins/plugins
+RUN while read i ; \ 
+		do /usr/local/bin/install-plugins.sh $i ; \
+	done < /usr/share/jenkins/plugins
 
 ENV JENKINS_USER admin
 ENV JENKINS_PASS admin

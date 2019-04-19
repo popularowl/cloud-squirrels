@@ -35,6 +35,11 @@ resource "digitalocean_droplet" "jenkinsci-server" {
     }
 
     provisioner "file" {
+        source      = "files/jenkins-plugins"
+        destination = "/tmp/jenkins-plugins"
+    }
+
+    provisioner "file" {
         source      = "files/default-user.groovy"
         destination = "/tmp/default-user.groovy"
     }
