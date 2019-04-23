@@ -1,6 +1,5 @@
 FROM jenkins/jenkins:latest
 
-
 # install jenkins plugins
 COPY ./jenkins-plugins /usr/share/jenkins/plugins
 RUN while read i ; \ 
