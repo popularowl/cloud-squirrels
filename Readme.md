@@ -7,4 +7,4 @@ Categories:
 * [Jenkins Continuous Integration](/jenkins)
 * ...
 
-maintained by [popularowl.com](https://www.popularowl.com/)
+maintained by [@popularowl](https://twitter.com/popularowl)
