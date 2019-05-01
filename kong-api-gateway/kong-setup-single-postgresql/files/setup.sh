@@ -36,4 +36,5 @@ ufw default allow outgoing
 ufw allow ssh
 ufw allow 22
 ufw allow 8000
+ufw allow 8001
 yes | ufw enable
