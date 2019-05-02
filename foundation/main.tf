@@ -1,5 +1,6 @@
 #
-# main Terraform file to describe automation
+# main Terraform file
+# to describe automation steps
 #
 
 # choose Digital Ocean provider
@@ -8,14 +9,13 @@ provider "digitalocean" {
 }
 
 # create VM instance on Digital Ocean
-# this instance will host Jenkins master and Nginx reverse proxy
-resource "digitalocean_droplet" "kong-api-gateway" {
+resource "digitalocean_droplet" "popularowl-server" {
     image = "${var.droplet_image}"
-    name = "kong-api-gateway"
+    name = "popularowl-server"
     region = "${var.region}"
     size = "${var.droplet_size}"
     ssh_keys = [
-        "${var.ssh_fingerprint}"
+        "${var.ssh_key_fingerprint}"
     ]
 
     # allow Terrform to connect via ssh
@@ -28,27 +28,21 @@ resource "digitalocean_droplet" "kong-api-gateway" {
 
     # copy the files
     provisioner "file" {
-        source      = "files/kong.conf"
-        destination = "/tmp/kong.conf"
-    }
-
-    provisioner "file" {
         source      = "files/setup.sh"
         destination = "/tmp/setup.sh"
     }
 
-    # run all necessary commands via remote shell 
+    # run all necessary commands via secure shell 
     provisioner "remote-exec" {
         inline = [
-            # update & install dependencies
-            "apt-get update",
+            # run setup script
             "chmod 755 /tmp/setup.sh",
             "/tmp/setup.sh"
         ]
     }
 }
 
-# print out ip address of created VM server
+# print out ip address of created Jenkins server VM
 output "service-ip" {
-  value = "your new instance is running with IP address: ${digitalocean_droplet.kong-api-gateway.ipv4_address}"
+  value = "your new instance is running with IP address: ${digitalocean_droplet.popularowl-server.ipv4_address}"
 }

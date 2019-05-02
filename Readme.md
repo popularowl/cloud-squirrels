@@ -1,13 +1,13 @@
 # Cloud Squirrels
 
-Cloud squirrels is a repository of practical automation tools & scripts for your cloud native projects. 
+Cloud squirrels is a repository of practical cloud automation tools & scripts for proof of concept projects.
 
-These tools and scripts are used during the tutorials and courses at [Popularowl](https://www.popularowl.com/about)
+These code is used during the tutorials and courses at [Popularowl](https://www.popularowl.com/about)
 
 Categories:
 
+* [Basic setup](/foundation)
 * [Jenkins Continuous Integration](/jenkins)
 * [Kong Api Gateway](/kong-api-gateway)
-* ...
 
 maintained by [@popularowl](https://twitter.com/popularowl)
