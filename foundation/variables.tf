@@ -19,7 +19,7 @@ variable "droplet_image" {
   default = "debian-9-x64"
 }
 
-variable "jenkins_droplet_size" {
+variable "droplet_size" {
   description = "Droplet size for Jenkins server"
   default = "1gb"
 }
@@ -33,9 +33,9 @@ variable "pvt_sshkey" {
   default = "~/.ssh/id_rsa"
 }
 
-# ssh_fingerprint should be exported in the local
-# shell environment to avoid hardcoded values
+# ssh_key_fingerprint variable placeholder
+# it should be exported as local env variable
 # see readme.md for examples
-variable "ssh_fingerprint" {
+variable "ssh_key_fingerprint" {
   description = "Fingerprint of the public ssh key stored on Digital Ocean"
 }
