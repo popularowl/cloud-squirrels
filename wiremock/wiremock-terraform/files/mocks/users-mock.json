@@ -1,0 +1,13 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/api/users"
+    },
+    "response": {
+        "jsonBody": {"something":"value","something2":"value2"},
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "status": 200
+    }
+}
