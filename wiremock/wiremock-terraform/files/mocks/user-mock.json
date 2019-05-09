@@ -1,23 +1,15 @@
 {
     "request": {
         "method": "GET",
-        "url": "/api/users"
+        "url": "/api/users/12345"
     },
     "response": {
-        "jsonBody": [
-            {
+        "jsonBody": {
               "id": "12345",
               "name": "name",
               "surname": "surname",
               "dob": "dob"
             },
-            {
-              "id": "123456",
-              "name": "name",
-              "surname": "surname",
-              "dob": "dob"
-            }
-          ],
         "headers": {
             "Content-Type": "application/json"
         },

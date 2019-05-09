@@ -1,8 +1,8 @@
 # Automated Kong Api Gateway setup with Terraform
 
-Source code in this repository is used for the set of Kong Api Gateway tutorials on [Popularowl](https://www.popularowl.com).
+Source code in this repository is used for Kong Api Gateway tutorials on [Popularowl](https://www.popularowl.com).
 
-* [bla](link)
+* [Automating Kong api gateway setup](https://www.popularowl.com/api-first/automating-kong-api-gateway-automating-setup/)
 
 ## How to use
 

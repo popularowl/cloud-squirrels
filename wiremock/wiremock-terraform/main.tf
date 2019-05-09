@@ -1,6 +1,6 @@
 #
 # main Terraform file
-# to describe automation steps
+# describes provisioning steps for setup
 #
 
 # choose Digital Ocean provider
@@ -31,13 +31,27 @@ resource "digitalocean_droplet" "popularowl-server" {
         source      = "files/setup.sh"
         destination = "/tmp/setup.sh"
     }
+    
+    provisioner "file" {
+        source      = "files/mocks"
+        destination = "/tmp/mocks"
+    }
+    provisioner "file" {
+        source      = "files/setup_mocks.py"
+        destination = "/tmp/setup_mocks.py"
+    }
 
     # run all necessary commands via secure shell 
     provisioner "remote-exec" {
         inline = [
-            # run setup script
+            # add required file permissions
             "chmod 755 /tmp/setup.sh",
-            "/tmp/setup.sh"
+            "chmod 755 /tmp/setup_mocks.py",
+            # run the VM setup script
+            "/tmp/setup.sh",
+            "echo sleep 10s to allow WireMock container boot up; sleep 10",
+            # run mock mappings provisioning
+            "cd /tmp && python setup_mocks.py"
         ]
     }
 }

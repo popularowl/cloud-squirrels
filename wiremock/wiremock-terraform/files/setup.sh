@@ -12,9 +12,8 @@ apt-cache policy docker-ce
 apt -y install docker-ce &&
 
 # start the wiremock-slim container
-run -d --name just-mock -p 80:8080 popularowl/wiremock-slim:2.23.2
+docker run -d --name just-mock -p 80:8080 popularowl/wiremock-slim:2.23.2 &&
 
-# provision the mock mappings
-#provisionMocks.py
+docker ps
 
-echo "All done. Welcome to your new virtual server!"
+echo "Server is up and running."

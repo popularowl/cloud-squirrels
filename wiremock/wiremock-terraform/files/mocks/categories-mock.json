@@ -1,0 +1,34 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/api/categories"
+    },
+    "response": {
+        "jsonBody": [
+            {
+              "id": "cat1",
+              "name": "category1"
+            },
+            {
+              "id": "cat2",
+              "name": "category2"
+            },
+            {
+              "id": "cat3",
+              "name": "category3"
+            },
+            {
+              "id": "cat4",
+              "name": "category4"
+            },
+            {
+              "id": "cat5",
+              "name": "category5"
+            }
+          ],
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "status": 200
+    }
+}

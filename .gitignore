@@ -1,4 +1,12 @@
+# terraform
 .terraform/
 terraform.tfstate
 terraform.tfstate.backup
+
+# vscode
+.vscode/
+
+# macos
+.DS_Store
+
 
