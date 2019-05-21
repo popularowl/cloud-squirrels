@@ -6,9 +6,9 @@ These code examples are used during the tutorials and courses at [Popularowl](ht
 
 Categories:
 
-* [Basic setup](/foundation)
+* [Foundation](/foundation)
 * [Jenkins Continuous Integration](/jenkins)
 * [Kong Api Gateway](/kong-api-gateway)
-* [Wiremock](/wiremock)
+* [Wiremock Setup](/wiremock)
 
 maintained by [@popularowl](https://twitter.com/popularowl)
