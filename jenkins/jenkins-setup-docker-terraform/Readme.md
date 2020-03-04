@@ -8,6 +8,18 @@ Source code in this repository is used for set of Jenkins tutorials on [Popularo
 
 ## How to use
 
+There are 2 ways you can use this infrastructure as a code.
+
+### Build Docker image
+
+You can just build Docker image from the provided Dockerfile and run Docker container locally.
+
+    cd files
+    docker build -t popularowl/jenkins .
+    docker run -d --name jenkins-server -p 8080:8080 popularowl/jenkins
+
+### Use Terraform build VM with Jenkins container
+
 This is [Terraform](https://www.terraform.io) project. It will install, configure and prepare Jenkins server for your continuous integration flow.
 
 Before running the Terraform script you have to first [setup ssh keys on Digital Ocean platform](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys) and export the values.
