@@ -6,9 +6,9 @@ Code examples in this repository are used in the tutorials and courses at [Popul
 
 Categories:
 
-* [Foundation](/foundation)
-* [Jenkins Continuous Integration](/jenkins)
-* [Kong Api Gateway](api-gateways/kong-api-gateway)
-* [Wiremock Setup](api-mocks/wiremock)
+* [Terraform foundation](/foundation) - basic terraform project setup
+* [API gateways](api-gateways) - setup, poc's for multiple API gateways
+* [API mocks](api-mocks/wiremock) - working examples of api mocking (wiremock, amokjs, etc)
+* [Continuous integration setup](/jenkins) - ci / cd toolset setup
 
 maintained by [@popularowl](https://twitter.com/popularowl)
