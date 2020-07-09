@@ -2,7 +2,9 @@
 
 > Cloud squirrels is a repository of practical serverless and cloud native platform demo projects and scripts.
 
-Code examples in this repository are used in the tutorials and courses at [Popularowl](https://www.popularowl.com/about). They are aimed at provisioning and setup of various cloud native architecture patterns used in the real world enterprise technology stacks.
+Code examples in this repository are used in the tutorials and courses at [Popularowl](https://www.popularowl.com/about). 
+
+They are aimed at provisioning and setup of various cloud native architecture patterns used in the real world enterprise technology stacks.
 
 Categories:
 
