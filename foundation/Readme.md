@@ -4,7 +4,7 @@ This lean example ilustrates how to build basic virtual servers. Source code als
 
 ## How to use this code
 
-This is [Terraform](https://www.terraform.io) project. Once you run it with Terraform it will setup and configure a single virtual server on [Digital Ocean](https://m.do.co/c/b61ccd72fd1c) cloud platform (with preintalled Docker CE) by using Digital Ocean apis.
+This is [Terraform](https://www.terraform.io) project. Once you run it with Terraform it will setup and configure a single virtual server on [Digital Ocean](https://m.do.co/c/b61ccd72fd1c) cloud platform (with preinstalled Docker CE) by using Digital Ocean apis.
 
 Before running this Terraform project you have to [upload public ssh key to Digital Ocean platform](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys) as described.
 
@@ -22,4 +22,4 @@ After the above setup steps are completed you all all set to use terraform and d
     terraform apply #create and configure the instances
     terraform destroy #destroy all cloud resources
 
-maintained by [@popularowl](https://twitter.com/popularowl)
+by [@popularowl](https://twitter.com/popularowl)
