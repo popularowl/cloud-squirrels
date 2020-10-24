@@ -44,5 +44,5 @@ resource "digitalocean_droplet" "popularowl-server" {
 
 # print out ip address of created Jenkins server VM
 output "service-ip" {
-  value = "your new instance is running with IP address: ${digitalocean_droplet.popularowl-server.ipv4_address}"
+  value = "your new instance is prepared and running with external IP address: ${digitalocean_droplet.popularowl-server.ipv4_address}"
 }
