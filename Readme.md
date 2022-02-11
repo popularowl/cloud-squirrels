@@ -9,7 +9,7 @@ The aim is to significantly simplify provisioning and setup of the various cloud
 
 Categories:
 
-* [Terraform foundation](/foundation) - basic terraform project setup
+* [Terraform](/terraform) - basic terraform project setup
 * [API gateways](api-gateways) - setup, poc's for multiple API gateways
 * [API mocks](api-mocks/wiremock) - working examples of api mocking (wiremock, amokjs, etc)
 * [Continuous integration setup](/jenkins) - ci / cd toolset setup
