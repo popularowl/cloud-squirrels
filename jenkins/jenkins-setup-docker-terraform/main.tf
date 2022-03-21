@@ -10,20 +10,21 @@ provider "digitalocean" {
 # create VM instance on Digital Ocean
 # this instance will host Jenkins master and Nginx reverse proxy
 resource "digitalocean_droplet" "jenkinsci-server" {
-    image = "${var.droplet_image}"
+    image = var.droplet_image
     name = "jenkinsci-server"
-    region = "${var.region}"
-    size = "${var.jenkins_droplet_size}"
+    region = var.region
+    size = var.droplet_size
     ssh_keys = [
-        "${var.ssh_fingerprint}"
+        var.ssh_key_fingerprint
     ]
 
     // allow Terrform to connect via ssh
     connection {
-        user = "root"
-        type = "ssh"
+        host        = self.ipv4_address
+        user        = "root"
+        type        = "ssh"
         private_key = "${file(var.pvt_sshkey)}"
-        timeout = "2m"
+        timeout     = "2m"
     }
 
     // copy the files to newly created instance

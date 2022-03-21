@@ -3,7 +3,6 @@
 # files in this project
 #
 
-
 # token should be exported in the local
 # shell environment to avoid hardcoded values
 # see readme.md for examples
@@ -16,13 +15,13 @@ variable "region" {
   default = "lon1"
 }
 variable "droplet_image" {
-  description = "Digital Ocean Droplet Image"
-  default = "debian-9-x64"
+  description = "Digital Ocean Droplet Image Name"
+  default = "debian-11-x64"
 }
 
-variable "jenkins_droplet_size" {
-  description = "Droplet size for Jenkins server"
-  default = "1gb"
+variable "droplet_size" {
+  description = "Droplet size"
+  default = "s-1vcpu-1gb"
 }
 
 # location of the private ssh key 
@@ -34,9 +33,9 @@ variable "pvt_sshkey" {
   default = "~/.ssh/id_rsa"
 }
 
-# ssh_fingerprint should be exported in the local
-# shell environment to avoid hardcoded values
+# ssh_key_fingerprint variable placeholder
+# it should be exported as local env variable
 # see readme.md for examples
-variable "ssh_fingerprint" {
+variable "ssh_key_fingerprint" {
   description = "Fingerprint of the public ssh key stored on Digital Ocean"
 }
