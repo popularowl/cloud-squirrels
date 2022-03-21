@@ -3,27 +3,29 @@
 # to describe automation steps
 #
 
-# choose Digital Ocean provider
+# configure the DigitalOcean Provider
+# with required security token
 provider "digitalocean" {
-  token = "${var.token}"
+  token = var.token
 }
 
 # create VM instance on Digital Ocean
 resource "digitalocean_droplet" "popularowl-server" {
-    image = "${var.droplet_image}"
+    image = var.droplet_image
     name = "popularowl-server"
-    region = "${var.region}"
-    size = "${var.droplet_size}"
+    region = var.region
+    size = var.droplet_size
     ssh_keys = [
-        "${var.ssh_key_fingerprint}"
+        var.ssh_key_fingerprint
     ]
 
     # allow Terrform to connect via ssh
     connection {
-        user = "root"
-        type = "ssh"
+        host        = self.ipv4_address
+        user        = "root"
+        type        = "ssh"
         private_key = "${file(var.pvt_sshkey)}"
-        timeout = "2m"
+        timeout     = "2m"
     }
 
     # copy the files

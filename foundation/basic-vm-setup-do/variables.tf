@@ -16,12 +16,12 @@ variable "region" {
 }
 variable "droplet_image" {
   description = "Digital Ocean Droplet Image Name"
-  default = "debian-9-x64"
+  default = "debian-11-x64"
 }
 
 variable "droplet_size" {
-  description = "Droplet size for Jenkins server"
-  default = "1gb"
+  description = "Droplet size"
+  default = "s-1vcpu-1gb"
 }
 
 # location of the private ssh key 
