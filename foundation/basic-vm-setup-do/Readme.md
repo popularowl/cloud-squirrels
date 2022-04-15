@@ -4,7 +4,9 @@ This example ilustrates how to provision a basic virtual server on Digital Ocean
 
 ## How to use this code
 
-This is [Terraform](https://www.terraform.io) project. Once you run it with Terraform it will setup and configure a single virtual server (droplet) on [Digital Ocean](https://m.do.co/c/b61ccd72fd1c) cloud platform. The VM will also have preinstalled Docker CE.
+This is a [Terraform](https://www.terraform.io) project. You need to have Terraform (>= 1.1.5) [installed](https://learn.hashicorp.com/tutorials/terraform/install-cli). 
+
+Once you run it with Terraform it will setup and configure a single virtual server (droplet) on [Digital Ocean](https://m.do.co/c/b61ccd72fd1c) cloud platform. The VM will also have preinstalled Docker CE.
 
 Before running this Terraform project you have to [upload your public ssh key to Digital Ocean platform](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys) and get its fingerprint.
 
