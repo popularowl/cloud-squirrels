@@ -1,5 +1,5 @@
 {
-  "title": "Cera Engineering Tech Radar"
+  "title": "Cera Engineering Tech Radar",
   "rings": [
     {
       "id": "use",
@@ -47,10 +47,10 @@
           "moved": 0,
           "ringId": "use",
           "date": "2020-08-06T00:00:00.000Z",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          "description": "Why do we use JavaScript?"
         }
       ],
-      "url": "#",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/javascript",
       "key": "javascript",
       "id": "javascript",
       "title": "JavaScript",
