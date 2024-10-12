@@ -27,7 +27,8 @@ resource "digitalocean_droplet" "jenkinsci-server" {
         timeout     = "2m"
     }
 
-    // copy the files to newly created instance
+    // copy all the required files 
+    // to the newly created instance
     provisioner "file" {
         source      = "files/jenkins-proxy"
         destination = "/tmp/jenkins-proxy"
@@ -46,6 +47,20 @@ resource "digitalocean_droplet" "jenkinsci-server" {
     provisioner "file" {
         source      = "files/default-user.groovy"
         destination = "/tmp/default-user.groovy"
+    }
+
+    provisioner "file" {
+        source      = "files/setup.sh"
+        destination = "/tmp/setup.sh"
+    }
+
+    # run provisioning script via secure shell 
+    provisioner "remote-exec" {
+        inline = [
+            # run setup script
+            "chmod 755 /tmp/setup.sh",
+            "/tmp/setup.sh"
+        ]
     }
 
     // run all necessary commands via remote shell 

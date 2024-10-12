@@ -16,7 +16,7 @@ variable "region" {
 }
 variable "droplet_image" {
   description = "Digital Ocean Droplet Image Name"
-  default = "debian-11-x64"
+  default = "debian-12-x64"
 }
 
 variable "droplet_size" {
