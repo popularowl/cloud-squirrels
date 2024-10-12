@@ -13,7 +13,7 @@ Before running this Terraform project you have to [upload your public ssh key to
 You also have to [generate Digital Ocean access token](https://www.digitalocean.com/docs/api/create-personal-access-token). Export both of these values as the environment variables on your local machine.
 
     export TF_VAR_token=xxxxxxxxx
-    export TF_VAR_ssh_fingerprint=xxxxxxxxx
+    export TF_VAR_ssh_key_fingerprint==xxxxxxxxx
 
 Step by step guide on [Popularowl site](https://www.popularowl.com/cloud-platforms/building-and-destroying-projects-with-terraform).
 

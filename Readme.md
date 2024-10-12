@@ -10,7 +10,7 @@ The aim of examples in this repository is to significantly simplify provisioning
 
 Categories:
 
-* [Basic VPS setup](basic-vps-setup-do) - basic VPS provisioning on DigitaOcean cloud platform. Together with simple Docker install script.
+* [Basic VPS setup](basic-vps-setup-do) - basic VPS provisioning on DigitaOcean cloud platform.
 * [API gateways](api-gateways) - setup, poc's for multiple API gateways
 * [API mocks](api-mocks/wiremock) - working examples of api mocking (wiremock, amokjs, etc)
 * [Continuous integration setup](/jenkins) - ci / cd toolset setup
