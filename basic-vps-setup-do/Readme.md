@@ -4,7 +4,7 @@ This example ilustrates how to provision a basic virtual private server on Digit
 
 ## How to use this code
 
-This is a [Terraform](https://www.terraform.io) project. You need to have Terraform (>= 1.9.7) [installed](https://learn.hashicorp.com/tutorials/terraform/install-cli).
+This is a [Terraform](https://www.terraform.io) project. You need to have Terraform v1.9.7+ [installed](https://learn.hashicorp.com/tutorials/terraform/install-cli).
 
 Once you run this project with Terraform it will setup and configure a single VPS server (droplet) on your [Digital Ocean](https://m.do.co/c/b61ccd72fd1c) cloud platform. After setup is finished VPS will also have preinstalled Docker environment.
 
