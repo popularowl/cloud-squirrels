@@ -1,7 +1,7 @@
 FROM jenkins/jenkins:2.480-jdk17
 
 # install jenkins plugins
-COPY --chown=jenkins:jenkins ./jenkins-plugins /usr/share/jenkins/plugins.txt
+COPY --chown=jenkins:jenkins ./jenkins-plugins.txt /usr/share/jenkins/plugins.txt
 RUN jenkins-plugin-cli -f /usr/share/jenkins/plugins.txt
 
 ENV JENKINS_USER=admin
