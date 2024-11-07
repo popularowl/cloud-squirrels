@@ -29,7 +29,7 @@ ulimit -n 4096
 cd /etc/kong &&
 cp /tmp/kong.conf /etc/kong/kong.conf
 kong migrations bootstrap [-c kong.conf]
-kong start [-c kong.conf]
+# kong start -c /etc/kong.conf --vv
 
 # setup debian firewall
 # only allow ports 22 & 8000
