@@ -1,8 +1,9 @@
 #!/bin/sh
 
-# update & install required dependencies
+# update & install 
+# required dependencies curl, netstat, etc.
 apt-get update
-apt-get install -y apt-transport-https curl
+apt-get install -y apt-transport-https curl net-tools
 
 # install & configure postgresql database
 # create kong db user & kong database
@@ -13,8 +14,8 @@ cd /tmp
 
 # kong db user with credentials
 su - postgres -c "createuser -s kong"
-sudo -u postgres psql -c "ALTER USER kong WITH PASSWORD 'kong';"
 su - postgres -c "createdb kong"
+sudo -u postgres psql -c "ALTER USER kong WITH PASSWORD 'kong';"
 
 # install the Kong API gateway (3.8.0)
 # guidelines from: https://docs.konghq.com/gateway/3.8.x/install/linux/debian/?install=oss
@@ -28,11 +29,13 @@ ulimit -n 4096
 # bootstrap & start Kong
 cd /etc/kong &&
 cp /tmp/kong.conf /etc/kong/kong.conf
-kong migrations bootstrap [-c kong.conf]
-# kong start -c /etc/kong.conf --vv
+kong migrations bootstrap -c /etc/kong/kong.conf --v
+kong start -c /etc/kong/kong.conf --v
 
 # setup debian firewall
-# only allow ports 22 & 8000
+# only allow ports for
+# ssh (22)
+# kong apis (8000) - as demo setup
 apt-get -y install ufw
 ufw status verbose
 ufw default deny incoming
@@ -40,5 +43,4 @@ ufw default allow outgoing
 ufw allow ssh
 ufw allow 22
 ufw allow 8000
-ufw allow 8001
 yes | ufw enable
