@@ -1,25 +1,29 @@
 #!/bin/sh
 
-# update & install dependencies
+# update & install required dependencies
 apt-get update
-apt-get install -y apt-transport-https curl lsb-core
+apt-get install -y apt-transport-https curl
 
-# linux opend files limit setup
-ulimit -n 4096
-
-# setup postgresql database
+# install & configure postgresql database
 # create kong db user & kong database
 apt-get install -y postgresql postgresql-contrib
+
+# change to neutral directory
+cd /tmp
+
+# kong db user with credentials
 su - postgres -c "createuser -s kong"
 sudo -u postgres psql -c "ALTER USER kong WITH PASSWORD 'kong';"
 su - postgres -c "createdb kong"
 
-# install the Kong api gateway
-echo "deb https://kong.bintray.com/kong-deb `lsb_release -sc` main" | sudo tee -a /etc/apt/sources.list
-curl -o bintray.key https://bintray.com/user/downloadSubjectPublicKey?username=bintray
-apt-key add bintray.key
-apt-get update
-apt-get install -y kong
+# install the Kong API gateway (3.8.0)
+# guidelines from: https://docs.konghq.com/gateway/3.8.x/install/linux/debian/?install=oss
+curl -Lo kong-3.8.0.deb "https://packages.konghq.com/public/gateway-38/deb/debian/pool/bullseye/main/k/ko/kong_3.8.0/kong_3.8.0_$(dpkg --print-architecture).deb"
+sudo apt install -y ./kong-3.8.0.deb
+
+# linux opend files limit setup
+# recomended setting for kong
+ulimit -n 4096
 
 # bootstrap & start Kong
 cd /etc/kong &&
