@@ -38,6 +38,11 @@ resource "digitalocean_droplet" "popularowl-server" {
         source      = "files/setup.sh"
         destination = "/tmp/setup.sh"
     }
+ 
+    provisioner "file" {
+        source      = "files/provision_apis.sh"
+        destination = "/tmp/provision_apis.sh"
+    }
 
     # run all necessary commands via remote shell 
     provisioner "remote-exec" {
@@ -45,7 +50,10 @@ resource "digitalocean_droplet" "popularowl-server" {
             # update & install dependencies
             "apt-get update",
             "chmod 755 /tmp/setup.sh",
-            "/tmp/setup.sh"
+            "/tmp/setup.sh",
+            # provision test api resource
+            "chmod 755 /tmp/provision_apis.sh",
+            "/tmp/provision_apis.sh"   
         ]
     }
 }
