@@ -10,3 +10,6 @@ terraform.tfstate.backup
 
 # macos
 .DS_Store
+
+# Vagrant
+.vagrant
