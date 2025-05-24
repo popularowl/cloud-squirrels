@@ -1,18 +1,18 @@
 # Cloud Squirrels
 
-> Cloud squirrels is a repository of practical, infrastructure as code projects and automation scripts.
+> Cloud squirrels is a repository of practical, infrastructure as a code projects and automation scripts.
 
-Most of the code examples in this repository are explained in the detailed tutorials and courses at [Popularowl](https://www.popularowl.com/blog) site. Examples use [Terraform](https://www.terraform.io/) for automation.
+The collection of the Terraform examples we use at PopularOwl Labs and decided to make public.
 
-DigitalOcean is used to showcase the deployments (it has a generous free tier) but you can use different cloud platform of your choice.
+Most of the code examples are explained in the detailed tutorials and courses at [Popularowl](https://www.popularowl.com/blog).
 
-If you want to try examples locally, on your dev machine, you can [setup local VMs with Vagrant](https://www.popularowl.com/blog/how-to-run-vps-on-macbook-apple-silicon/).
+We use DigitalOcean (and its free tier) as a sandbox to showcase the deployments, but you can use cloud platform of your choice - concepts remain the same.
 
-The aim of examples in this repository is to significantly showcase options for setup of POCs to explore various applications in the cloud.
+If you want to comment or contribute - make a pull request.
 
-Categories:
+### Categories:
 
-* [VM setup with Vagrant](vm-setup-vagrant) - setup virtual machines on your Macbook.
+* [VM setup with Vagrant](vm-setup-vagrant) - setup [Vagrant virtual machines](https://www.popularowl.com/blog/how-to-run-vps-on-macbook-apple-silicon/) on your Macbook.
 * [Basic VPS setup](basic-vps-setup-do) - basic VPS provisioning on DigitaOcean cloud platform.
 * [API gateways](api-gateways) - setup, poc's for multiple API gateways
 * [API mocks](api-mocks/wiremock) - working examples of API mocking (wiremock, amokjs, etc)
