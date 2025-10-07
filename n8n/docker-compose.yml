@@ -5,14 +5,14 @@ services:
     image: docker.n8n.io/n8nio/n8n
     restart: always
     environment:
+      # unset the diagnostics being sent externally
       - N8N_DIAGNOSTICS_ENABLED=false
       - N8N_VERSION_NOTIFICATIONS_ENABLED=false
       - N8N_TEMPLATES_ENABLED=false
-      # unset the diagnostics configuration
       - EXTERNAL_FRONTEND_HOOKS_URLS=
       - N8N_DIAGNOSTICS_CONFIG_FRONTEND=
       - N8N_DIAGNOSTICS_CONFIG_BACKEND=
-      # set the debug level
+      # set the log level
       - N8N_LOG_LEVEL=debug
     ports:
       - :5678:5678
